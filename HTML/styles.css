@@ -101,3 +101,16 @@
     background-repeat: no-repeat;
 
 }
+
+.login-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+    height: 600px;
+    width: 600px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
