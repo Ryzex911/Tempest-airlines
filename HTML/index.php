@@ -14,7 +14,7 @@ require_once "navbar.php";
     <title>Home</title>
 </head>
 <body>
-
+    hihihihih
 </body>
 </html>
 

@@ -16,6 +16,10 @@ require_once "connection.php";
     <title>login</title>
 </head>
 <body class="login-body">
+        <div class="login-parent">
+            <div class="login-form">
 
+            </div>
+        </div>
 </body>
 </html>
