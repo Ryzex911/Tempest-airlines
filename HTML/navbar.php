@@ -1,17 +1,19 @@
-<link rel="stylesheet" href="styles.css">
-<div class="nav-parent">
-<nav role="navigation">
-    <div id="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-        <ul id="menu">
-            <a href="index.php"><li>Home</li></a>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Reizen</li></a>
-            <a href="login.php"><li>Login</li></a>
-        </ul>
-    </div>
-</nav>
+<?php
+require_once "connection.php";
+?>
+
+
+<link rel="stylesheet" href="css/styles.css">
+<input type="checkbox" id="active">
+<label for="active" class="menu-btn"><span></span></label>
+<label for="active" class="close"></label>
+<div class="wrapper">
+    <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Login</a></li>
+    </ul>
 </div>
+

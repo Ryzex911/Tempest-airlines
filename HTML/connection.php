@@ -11,5 +11,5 @@ $options = [
     PDO::ATTR_EMULATE_PREPARES => false,
 ];
 
-$pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass, $options);
+//$pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass, $options);
 
