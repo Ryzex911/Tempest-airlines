@@ -11,9 +11,9 @@ require_once "connection.php";
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="about-us.php">About</a></li>
-        <li><a href="">Menu</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Login</a></li>
+        <li><a href="reizen.php">Reizen</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="login.php">Login</a></li>
     </ul>
 </div>
 
