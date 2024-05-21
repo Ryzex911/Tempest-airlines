@@ -3,7 +3,7 @@ version: '3.1'
 services:
   web:
     image: php:8.0-apache
-    container_name: php_web
+    container_name: php_web_webapp2
     build:
       context: .
       dockerfile: Dockerfile-php
@@ -19,7 +19,7 @@ services:
     # Bart beun oplossing voor MAC OS
     # platform: linux/x86_64
     image: mysql:5.7
-    container_name: mysql_db
+    container_name: mysql_db_webapp2
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
@@ -31,7 +31,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
+    container_name: phpmyadmin_webapp2
     restart: always
     ports:
       - "8080:80"

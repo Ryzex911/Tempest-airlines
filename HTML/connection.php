@@ -1,6 +1,6 @@
 <?php
 
-$host = 'mysql_db';
+$host = 'mysql_db_webapp2';
 $db = 'mydatabase';
 $user = 'root';
 $pass = 'rootpassword';
