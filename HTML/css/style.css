@@ -1,3 +1,6 @@
+.main{
+    display: flex;
+}
 .head{
     font-size: 35px;
 }
@@ -8,4 +11,10 @@
 .text{
     margin-top: 20px;
     font-size: 19px;
+}
+.img-plane{
+    height: 550px;
+    width: 350px;
+    margin-left: 350px;
+    margin-top: 90px;
 }
