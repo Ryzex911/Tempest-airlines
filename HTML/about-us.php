@@ -18,7 +18,13 @@ require_once "navbar.php";
             About us
         </div>
         <div class="text">
-            Bij Prijsvrij Vakanties gaan we tot het uiterste <br>om onze klanten de beste reiservaring te <br> bieden, zonder de prijs uit het oog te <br>verliezen. Met een indrukwekkende Trustpilot-<br>score van 8,6, beloven we transparantie en <br>kwaliteit in al onze diensten. Geen verborgen <br>kosten, alleen de beste deals.
+            Bij Prijsvrij Vakanties gaan we tot het uiterste <br>
+            om onze klanten de beste reiservaring te <br>
+            bieden, zonder de prijs uit het oog te <br>
+            verliezen. Met een indrukwekkende Trustpilot-<br>
+            score van 8,6, beloven we transparantie en <br>
+            kwaliteit in al onze diensten. Geen verborgen <br>
+            kosten, alleen de beste deals. <br>
         </div>
         <div class="text">
             Onze toewijding aan klanttevredenheid heeft <br>
@@ -41,7 +47,7 @@ require_once "navbar.php";
             vakantie die aan al je verwachtingen voldoet. <br>
         </div><br>
     </div>
-    <img src="pics/img-planewing.png" class="img-plane" alt="img van uit een raam van een vliegtuig"/>
+
 </div>
 </body>
 </html>
