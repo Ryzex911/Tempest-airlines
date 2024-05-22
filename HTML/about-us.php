@@ -47,7 +47,7 @@ require_once "navbar.php";
             vakantie die aan al je verwachtingen voldoet. <br>
         </div><br>
     </div>
-    <img src="pics/img-planewing.png" class="img-plane" alt="img van uit een raam van een vliegtuig"/>
+
 </div>
 </body>
 </html>
