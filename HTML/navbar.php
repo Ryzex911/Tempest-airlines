@@ -13,7 +13,7 @@ require_once "connection.php";
         <li><a href="about-us.php">About</a></li>
         <li><a href="reizen.php">Reizen</a></li>
         <li><a href="contact.php">Contact</a></li>
-        <li><a href="login.php">Login</a></li>
+        <li><a href="email-login-form.php">Login</a></li>
     </ul>
 </div>
 
