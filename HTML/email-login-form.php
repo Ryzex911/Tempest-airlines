@@ -25,10 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
+<body class="login-form-body">
 <link rel="stylesheet" href="css/styles.css">
 <div class="login-box">
-    <p>Login</p>
+    <p>Welcome back</p>
     <form id="login-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <div class="user-box">
             <input required="" name="email" type="text">
@@ -38,16 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input required="" name="password" type="password">
             <label>Password</label>
         </div>
-        <a href="#" onclick="document.getElementById('login-form').submit(); return false;" class="submit-link">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-        </a>
+        <a href="#" onclick="document.getElementById('login-form').submit(); return false;" class="submit-link">Login</a>
     </form>
     <p>Don't have an account? <a href="register-form.php" class="a2">Sign up!</a></p>
 </div>
-<video autoplay loop muted plays-inline class="background-video">
-    <source src="pics/backgroundvideo1.webm" type="video/mp4">
-</video>
+</body>

@@ -1012,17 +1012,16 @@ z-index: -1;
 
 /*******************************************contact page *****************************8******************************/
 .contact-body {
-    background-image: url("../pics/b-w-hands.jpg");
+    background-image: url("../pics/contactuspic.png");
     background-size: cover;
     background-position: center;
     z-index: -1;
 }
 .contact-form {
     position: relative;
-    left: 430px;
-    top: 100px;
-    background-color: transparent;
-    backdrop-filter: blur(7px);
+    left: 720px;
+    top: 175px;
+    background-color: rgba(0, 0, 0, 0.41);
     padding: 20px;
     max-width: 500px;
     border-radius: 10px;
@@ -1089,9 +1088,88 @@ textarea {
 
 /*****************************************************start of homepage***********************************************************/
 
-.home-body{
-    background-image:url("../pics/aboutus.png");
-    background-repeat: no-repeat;
-    background-size: 100% 320px;
+/**/
+.homepage {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
 
+header {
+    background: url('../pics/plane.png') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-text {
+    margin-right: 700px;
+    margin-bottom: 500px;
+    color: black;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+}
+
+.pup-trips {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 60px;
+}
+.section-title {
+    position: absolute;
+    font-size: 45px;
+    text-shadow: rgba(18, 128, 218, 0.63);
+    top: 500px;
+    color: #000000;
+    left: 450px;
+}
+
+.trip {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.trip img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    margin-top: -40.5%;
+}
+
+
+.trip h3 {
+    margin-top: 10px;
+}
+
+.book-now-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-now-btn:hover {
+    background-color: #0056b3;
+}
+.trip-desc {
+    background-color: rgba(175, 161, 161, 0.22);
 }

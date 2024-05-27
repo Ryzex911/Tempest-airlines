@@ -33,47 +33,42 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 
-<body class="regsiter-body">
-<form class="form" action="register-form.php" method="POST" onsubmit="return validateForm()">
-    <p class="title">Register</p>
-    <p class="message">Signup now and get full access to our trips.</p>
-    <div class="flex">
-        <label>
-            <input class="input" type="text" name="firstname" placeholder="" required="">
-            <span>Firstname</span>
-        </label>
+<body class="login-form-body">
+<link rel="stylesheet" href="css/styles.css">
+<div class="login-box">
+    <p>Regsiter Here</p>
+    <form id="login-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <div class="user-box">
+            <input required="" name="firstname" type="text">
+            <label>First Name</label>
+        </div>
+        <div class="user-box">
+            <input required="" name="lastname" type="text">
+            <label>Last Name</label>
+        </div>
+        <div class="user-box">
+            <input required="" name="email" type="text">
+            <label>Email</label>
+        </div>
+        <div class="user-box">
+            <input required="" name="password" type="password">
+            <label>Password</label>
+        </div>
+        <div class="user-box">
+        <input required="" name="confirmpassword" type="password">
+        <label>Confirm Password</label>
+            </div>
 
-        <label>
-            <input class="input" type="text" name="lastname" placeholder="" required="">
-            <span>Lastname</span>
-        </label>
-    </div>
-
-    <label>
-        <input class="input" type="email" name="email" placeholder="" required="">
-        <span>Email</span>
-    </label>
-
-    <label>
-        <input class="input" type="password" name="password" placeholder="" required="">
-        <span>Password</span>
-    </label>
-    <label>
-        <input class="input" type="password" name="confirmpassword" placeholder="" required="" >
-        <span>Confirm password</span>
-    </label>
-    <button class="submit" type="submit">Submit</button>
-    <p class="signin">Already have an account? <a href="login.php">Sign in</a></p>
-</form>
-    <video autoplay loop muted plays-inline class="background-video">
-    <source src="pics/backgroundvideo1.webm" type="video/mp4">
-        </video>
+        <a href="#" onclick="document.getElementById('login-form').submit(); return false;" class="submit-link">Register</a>
+    </form>
+    <p>Already have an account? <a href="email-login-form.php" class="a2">Login!</a></p>
+</div>
 </body>
 
 
     <script>
         function validateForm() {
-            var password = document.getElementById("password").value;
+            var password = document.getElementById("Password").value;
             var confirmPassword = document.getElementById("confirmpassword").value;
             if (password !== confirmPassword) {
                 alert("Passwords do not match");

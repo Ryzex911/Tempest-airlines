@@ -1,31 +1,45 @@
 <?php
-require_once "navbar.php";
+session_start();
 require_once "connection.php";
+require_once 'navbar.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+        $stmt->execute([$email]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['email'] = $user['email'];
+            echo "<script>window.location.href = 'reizen.php';</script>";
+            exit();
+        } else {
+            echo "<script>alert('Incorrect email or password');</script>";
+        }
+    } catch (PDOException $e) {
+        echo "<script>alert('Database error: " . $e->getMessage() . "');</script>";
+    }
+}
 ?>
-
+<body class="login-form-body">
 <link rel="stylesheet" href="css/styles.css">
-<body class="login-body">
-
-<div class="login-parent">
-    <div class="login-form">
-        <h1 class="first-text">Get the full experience</h1>
-        <p class="second-text">Track prices, make trip planning easier <br> and enjoy faster booking.</p>
-        <ul class="login-links">
-            <li><a class="apple-logo tooltip" href=""><img class="apple" src="pics/Apple%20Logo.png" alt="apple-logo">Continue with Apple
-                    <span class="tooltiptext">Coming Soon!</span>
-                </a></li>
-            <li><a class="facebook-logo tooltip" href="comingsoon-page.php"><img class="facebook" src="pics/Facebook.png" alt="facebook-logo">Continue with Facebook
-                    <span class="tooltiptext">Coming Soon!</span>
-                </a></li>
-            <li><a class="google-logo tooltip" href="comingsoon-page.php"><img class="google" src="pics/Google.png" alt="google-logo">Continue with Google
-                    <span class="tooltiptext">Coming Soon!</span>
-                </a></li>
-            <li><a class="email-logo" href="email-login-form.php"><img class="email" src="pics/Email.png" alt="email-logo">Continue with Email</a></li>
-        </ul>
-        <div class="registration-link">
-            <p class="make-account">Dont have an account? </p>
-            <li><a class="make-account-btn" href="register-form.php">Register</a></li>
+<div class="login-box">
+    <p>Welcome back</p>
+    <form id="login-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <div class="user-box">
+            <input required="" name="email" type="text">
+            <label>Email</label>
         </div>
-    </div>
+        <div class="user-box">
+            <input required="" name="password" type="password">
+            <label>Password</label>
+        </div>
+        <a href="#" onclick="document.getElementById('login-form').submit(); return false;" class="submit-link">Login</a>
+    </form>
+    <p>Don't have an account? <a href="register-form.php" class="a2">Sign up!</a></p>
 </div>
 </body>
