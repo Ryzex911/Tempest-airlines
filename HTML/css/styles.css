@@ -40,7 +40,7 @@
     top: calc(50% - 1px);
     left: 30%;
     width: 40%;
-    border-bottom: 2px solid rgb(174, 56, 56);
+    border-bottom: 2px solid rgb(236, 236, 236);
     transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -135,7 +135,7 @@ input[type="checkbox"]{
 }
 /************************************start of login page*****************************************/
 
-.login-body {
+body {
     background-size: cover;
     background-image: url("../pics/clouds.jpg");
     background-repeat: no-repeat;
@@ -198,7 +198,7 @@ input[type="checkbox"]{
     color: white;
     height: 50px;
     width: 90%;
-    margin-left: 28px;
+    margin-left: 52px;
     background-color: #9D9D9D;
     transition: background-color 0.3s;
 }
@@ -222,6 +222,34 @@ input[type="checkbox"]{
 .apple-logo:hover, .facebook-logo:hover, .google-logo:hover, .email-logo:hover {
     background-color: #333;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    }
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
 /*******************************************************Coming soon page*****************************************/
 .coming-soon-text {
     font-size: 50px;
@@ -808,7 +836,7 @@ z-index: -1;
     padding: 40px;
     margin: 20px auto;
     transform: translate(-50%, -55%);
-    background: transparent;
+    background: black;
     backdrop-filter: blur(8px);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);

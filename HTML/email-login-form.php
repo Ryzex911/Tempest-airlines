@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['email'] = $user['email'];
-            echo "<script>window.location.href = 'about-us.php';</script>";
+            echo "<script>window.location.href = 'reizen.php';</script>";
             exit();
         } else {
             echo "<script>alert('Incorrect email or password');</script>";
