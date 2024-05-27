@@ -13,10 +13,10 @@ require_once "navbar.php";
 </head>
 <body>
 <div class="main">
+    <div class="head">
+        About us
+    </div>
     <div class="about-us-text">
-        <div class="head">
-            About us
-        </div>
         <div class="text">
             Bij Prijsvrij Vakanties gaan we tot het uiterste <br>
             om onze klanten de beste reiservaring te <br>
