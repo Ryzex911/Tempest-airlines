@@ -14,13 +14,13 @@ try {
     if (count($results) > 0) {
         foreach ($results as $row) {
             echo '<div class="reiscard">';
-            echo '<p>Boekingnummer: ' . htmlspecialchars($row['id']) . '</p>';
+            echo '<p>Boekingnummer: ' . ($row['id']) . '</p>';
             echo '<br>';
-            echo '<h3>' . htmlspecialchars($row['bestemming']) . '.</h3>';
-            echo '<p><i class="fa-solid fa-plane-departure"></i> ' . htmlspecialchars($row['aankomst']) . '</p>';
-            echo '<p><i class="fa-solid fa-plane-arrival"></i> ' . htmlspecialchars($row['vertrek']) . '</p>';
+            echo '<h3>' .($row['bestemming']) . '.</h3>';
+            echo '<p><i class="fa-solid fa-plane-departure"></i> ' . ($row['aankomst']) . '</p>';
+            echo '<p><i class="fa-solid fa-plane-arrival"></i> ' . ($row['vertrek']) . '</p>';
             echo '<br>';
-            echo '<small>&euro;' . htmlspecialchars($row['prijs']) . '</small>';
+            echo '<small>&euro;' . ($row['prijs']) . '</small>';
             echo '</div>';
         }
     } else {

@@ -106,7 +106,7 @@
     font-size: 30px;
     font-weight: 500;
     padding: 5px 30px;
-    color: black;
+    color: #ffffff;
     border-radius: 50px;
     line-height: 50px;
     margin: 5px 30px;
@@ -135,9 +135,9 @@ input[type="checkbox"]{
 }
 /************************************start of login page*****************************************/
 
-body {
-    background-size: cover;
-    background-image: url("../pics/clouds.jpg");
+.login-form-body {
+    background-size: 100% 800px;
+    background-image: url("../pics/loginpic.png");
     background-repeat: no-repeat;
 
 }
@@ -836,7 +836,7 @@ z-index: -1;
     padding: 40px;
     margin: 20px auto;
     transform: translate(-50%, -55%);
-    background: black;
+    background: rgba(10, 9, 9, 0.51);
     backdrop-filter: blur(8px);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
@@ -893,11 +893,12 @@ z-index: -1;
     display: inline-block;
     padding: 10px 20px;
     font-weight: bold;
-    color: #fff;
+    color: white;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
+    border: solid;
     transition: .5s;
     margin-top: 40px;
     letter-spacing: 3px
@@ -1084,4 +1085,13 @@ textarea {
 .contact-form button[type="submit"]:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
+}
+
+/*****************************************************start of homepage***********************************************************/
+
+.home-body{
+    background-image:url("../pics/aboutus.png");
+    background-repeat: no-repeat;
+    background-size: 100% 320px;
+
 }

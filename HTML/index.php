@@ -13,7 +13,7 @@ require_once "navbar.php";
     <link rel="stylesheet" href="css/styles.css">
     <title>Home</title>
 </head>
-<body>
+<body class="home-body">
  <div>
 
 </div>
