@@ -1,3 +1,7 @@
+* {
+    font-family: Oswald, sans-serif;
+}
+
 /**********************************the navbar styling********************************************/
 .navbar {
     display: flex;
@@ -1058,7 +1062,8 @@ textarea {
 
 .contact-form input, .contact-form textarea {
     padding: 10px;
-    border: none;
+    border:2px solid white;
+    background-color: transparent;
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -1071,8 +1076,7 @@ textarea {
 }
 
 .contact-form button[type="submit"] {
-    background-color: #9f9a9a;
-    box-shadow: 10px 5px 5px white;
+    background-color: #37426e;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -1087,8 +1091,6 @@ textarea {
 }
 
 /*****************************************************start of homepage***********************************************************/
-
-/**/
 .homepage {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -1173,3 +1175,350 @@ header {
 .trip-desc {
     background-color: rgba(175, 161, 161, 0.22);
 }
+
+
+/************************admin page ****************************************************/
+
+.admin-items {
+    background-color: rgba(0, 0, 0, 0.79);
+
+}
+.admin-items-container {
+    background-color: rgba(0, 0, 0, 0.51);
+    background-image: url("../pics/plane-nobackground.png");
+    background-repeat: no-repeat;
+    max-width: 1200px;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.admin-welcoming-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.admin-items-list-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #f5f5f5;
+}
+
+/* Button Styles */
+.admin-add-btn, .admin-edit-btn, .admin-delete-btn {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-add-btn {
+    background-color: #007bff;
+}
+
+.admin-edit-btn {
+    background-color: #28a745;
+}
+
+.admin-delete-btn {
+    background-color: #dc3545;
+}
+
+.admin-add-btn:hover, .admin-edit-btn:hover, .admin-delete-btn:hover {
+    opacity: 0.9;
+}
+
+/* Search Bar Styles */
+.admin-search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.admin-search-bar input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.admin-search-bar button {
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+}
+
+/* Table Styles */
+.admin-items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-items-table th, .admin-items-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: white;
+    text-align: center;
+}
+
+.admin-items-table th {
+    background-color: #000000;
+}
+
+.admin-highlight {
+    background-color: yellow;
+}
+
+
+/********************************************************addreis******************************************/
+.admin-add-html {
+    background-color: rgba(0, 0, 0, 0.79);
+
+}
+
+.admin-add-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.51);
+    background-image: url("../pics/plane-nobackground.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Header Styles */
+.admin-welcoming-text2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+/* Button Styles */
+.admin-back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.admin-back-btn:hover {
+    opacity: 0.9;
+}
+
+/* Form Styles */
+.admin-add-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-add-form input[type="text"],
+.admin-add-form input[type="number"],
+.admin-add-form input[type="date"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin-date-field {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.admin-date-label {
+    position: absolute;
+    left: 100px;
+    top: 13px;
+    font-size: 14px;
+    color: #666;
+}
+
+.admin-submit-btn {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-submit-btn:hover {
+    opacity: 0.9;
+}
+/*******************************************************************editreis*******************************************/
+.admin-edit-html {
+    background-color: rgba(0, 0, 0, 0.79);
+}
+
+.admin-edit-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.51);
+    background-image: url("../pics/plane-nobackground.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Header Styles */
+.admin-welcoming-text3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Button Styles */
+.admin-back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    transition: background-color 0.3s ease;
+}
+
+.admin-back-btn:hover {
+    opacity: 0.9;
+}
+
+/* Form Styles */
+.admin-edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-edit-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.admin-edit-form input[type="text"],
+.admin-edit-form input[type="number"],
+.admin-edit-form input[type="date"],
+.admin-edit-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin-edit-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.admin-submit-btn {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-submit-btn:hover {
+    opacity: 0.9;
+}
+
+/*******************************************************deletereis***********************************************/
+
+.delete-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.51);
+    background-image: url("../pics/plane-nobackground.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Header Styles */
+.welcoming-text4 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f6f6f6;
+}
+
+/* Button Styles */
+.delete-btn-confirm {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn-confirm:hover {
+    background-color: #c82333;
+}
+
+.delete-btn-cancel {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #6c757d;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn-cancel:hover {
+    background-color: #5a6268;
+}
+
+/* Form Styles */
+.delete-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Item Details Styles */
+.item-details p {
+    margin: 5px 0;
+    color: whitesmoke;
+}
+
+.title-text, .desc-text, .prijs-text, .date-text, .image-text {
+    font-weight: bold;
+}
+
