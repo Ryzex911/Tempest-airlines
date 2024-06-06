@@ -17,35 +17,28 @@ require_once "navbar.php";
         About us
     </div>
     <div class="about-us-text">
-        <div class="text">
-            Bij Prijsvrij Vakanties gaan we tot het uiterste <br>
-            om onze klanten de beste reiservaring te <br>
-            bieden, zonder de prijs uit het oog te <br>
-            verliezen. Met een indrukwekkende Trustpilot-<br>
-            score van 8,6, beloven we transparantie en <br>
-            kwaliteit in al onze diensten. Geen verborgen <br>
+        <div class="text-top">
+            Bij Prijsvrij Vakanties gaan we tot het uiterste om onze klanten de <br>
+            beste reiservaring te bieden, zonder de prijs uit het oog te verliezen. <br>
+            Met een indrukwekkende Trustpilot- score van 8,6, beloven we <br>
+            transparantie en kwaliteit in al onze diensten. Geen verborgen <br>
             kosten, alleen de beste deals. <br>
         </div>
         <div class="text">
-            Onze toewijding aan klanttevredenheid heeft <br>
-            een sterke online gemeenschap gecreëerd, <br>
-            met meer dan 215.000 fans op Facebook en <br>
-            meer dan 17.500 volgers op Instagram. We zijn <br>
-            trots op het vertrouwen dat onze klanten in <br>
-            ons stellen en de liefde die ze tonen voor onze <br>
-            service. <br>
+            Onze toewijding aan klanttevredenheid heeft een sterke online <br>
+            gemeenschap gecreëerd,met meer dan 215.000 fans op Facebook <br>
+            en meer dan 17.500 volgers op Instagram. We zijn trots op het <br>
+            vertrouwen dat onze klanten in ons stellen en de liefde die ze tonen <br>
+            voor onze service. <br>
         </div>
         <div class="text">
-            Al meer dan een decennium lang is Prijsvrij <br>
-            Vakanties dé plek voor de beste <br>
-            vakantieaanbiedingen. Met een zorgvuldig <br>
-            geselecteerd assortiment van reizen, van <br>
-            ontspannende zonvakanties tot opwindende <br>
-            stedentrips en avontuurlijke reizen over de <br>
-            hele wereld, bieden we voor elk wat wils. Onze <br>
-            expertise en toewijding staan garant voor een <br>
-            vakantie die aan al je verwachtingen voldoet. <br>
-        </div><br>
+            Al meer dan een decennium lang is Prijsvrij Vakanties dé plek voor <br>
+            de beste vakantieaanbiedingen. Met een zorgvuldig geselecteerd <br>
+            assortiment van reizen, van ontspannende zonvakanties tot <br>
+            opwindende stedentrips en avontuurlijke reizen over de hele wereld, <br>
+            bieden we voor elk wat wils. Onze expertise en toewijding staan <br>
+            garant voor een vakantie die aan al je verwachtingen voldoet. <br>
+        </div>
     </div>
 
 </div>

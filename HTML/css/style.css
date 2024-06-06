@@ -1,21 +1,29 @@
 .main{
     display: flex;
+    align-items: center;
 }
 .head{
-    font-size: 35px;
-    background-color: #0062DE;
+    font-size: 25px;
+    background-color:  #9096BA;
     color: white;
-    width: 50%;
-    padding: 8px;
+    width: 25%;
+    padding: 12px;
+    margin-top: 200px;
 }
 .about-us-text{
     background-color: white;
-    padding: 8px;
-    width: 50%;
+    padding: 12px;
+    width: 25%;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 .text{
-    margin-top: 20px;
-    font-size: 19px;
+    margin-top: 15px;
+    font-size: 15px;
+    color: black;
+}
+.text-top{
+    font-size: 15px;
     color: black;
 }
 .img-plane{
@@ -30,6 +38,7 @@
     flex-direction: column;
 }
 body{
-    background-image: url("../pics/cur-img.png");
+    background-image: url("../pics/plane-horo.jpg");
     background-repeat: no-repeat;
+    background-size: 1540px 550px;
 }
