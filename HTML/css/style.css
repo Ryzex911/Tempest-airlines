@@ -4,7 +4,7 @@
 }
 .head{
     font-size: 25px;
-    background-color:  #9096BA;
+    background-color:  #406a90;
     color: white;
     width: 25%;
     padding: 12px;
@@ -38,7 +38,7 @@
     flex-direction: column;
 }
 body{
-    background-image: url("../pics/plane-horo.jpg");
+    background-image: url("../pics/image 1-Photoroom (1).png");
     background-repeat: no-repeat;
-    background-size: 1540px 550px;
+    background-size: 1537px 720px;
 }
