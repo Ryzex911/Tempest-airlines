@@ -9,7 +9,7 @@
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="about-us.php">About</a></li>
-        <li><a href="display-reizen.php">Reizen</a></li>
+        <li><a href="reizen.php">Reizen</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="email-login-form.php">Login</a></li>
     </ul>
