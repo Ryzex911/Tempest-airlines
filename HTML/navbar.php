@@ -15,7 +15,7 @@
         <?php if (isset($_SESSION['user_id'])): ?>
             <li><a href="logout.php">Logout</a></li>
         <?php else: ?>
-            <li><a href="email-login-form.php">Login</a></li>
+            <li><a href="email-login-form.php">Account</a></li>
         <?php endif; ?>
     </ul>
 </div>

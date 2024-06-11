@@ -29,9 +29,9 @@ try {
     <title>Your Trips</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="reis-body">
 <div class="container">
-    <h1>Your booked trips</h1>
+    <h1 class="title-trip">Your booked trips</h1>
     <div class="trips">
         <?php foreach($trips as $trip): ?>
             <div class="trip">
