@@ -1522,3 +1522,78 @@ header {
     font-weight: bold;
 }
 
+/*******************************************************************reizen pagina**************************************************/
+.reis-body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin: 20px 0;
+}
+
+.login-box form, .container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box label, .login-box input, .container label, .container input {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.trips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.trip {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    width: 30%;
+    padding: 20px;
+    text-align: left;
+}
+
+.trip img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.trip .info {
+    padding: 15px 0;
+}
+
+.trip .info h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.trip .info p {
+    margin: 10px 0 0;
+    color: #555;
+}
+
+.logout-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF0000;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}

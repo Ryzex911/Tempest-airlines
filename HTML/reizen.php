@@ -1,32 +1,48 @@
 <?php
 session_start();
-require_once "navbar.php";
-require_once "connection.php";
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit();
+}
+
+require_once 'connection.php';
+require_once 'navbar.php';
 
 $user_id = $_SESSION['user_id'];
-try {
-    $sql = 'SELECT * FROM boeking WHERE user_id = :user_id ORDER BY id DESC';
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
-    $stmt->execute();
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    if (count($results) > 0) {
-        foreach ($results as $row) {
-            echo '<div class="reiscard">';
-            echo '<p>Boekingnummer: ' . ($row['id']) . '</p>';
-            echo '<br>';
-            echo '<h3>' .($row['bestemming']) . '.</h3>';
-            echo '<p><i class="fa-solid fa-plane-departure"></i> ' . ($row['aankomst']) . '</p>';
-            echo '<p><i class="fa-solid fa-plane-arrival"></i> ' . ($row['vertrek']) . '</p>';
-            echo '<br>';
-            echo '<small>&euro;' . ($row['prijs']) . '</small>';
-            echo '</div>';
-        }
-    } else {
-        echo '<tr><td colspan="3">Geen reizen gevonden.</td></tr>';
-    }
+try {
+    $stmt = $pdo->prepare("SELECT reis.titel, reis.prijs, reis.image 
+                           FROM reis 
+                           INNER JOIN boeking ON reis.id = boeking.reis_id 
+                           WHERE boeking.user_id = ?");
+    $stmt->execute([$user_id]);
+    $trips = $stmt->fetchAll();
 } catch (PDOException $e) {
-    echo 'Error: ' . $e->getMessage();
+    die("Database error: " . $e->getMessage());
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Trips</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Your booked trips</h1>
+    <div class="trips">
+        <?php foreach($trips as $trip): ?>
+            <div class="trip">
+                <img src="<?= htmlspecialchars($trip['image']); ?>" alt="<?= htmlspecialchars($trip['titel']); ?>">
+                <div class="info">
+                    <h2><?= htmlspecialchars($trip['titel']); ?></h2>
+                    <p>$<?= number_format($trip['prijs'], 2); ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+</body>
+</html>

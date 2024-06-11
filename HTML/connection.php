@@ -1,5 +1,4 @@
 <?php
-
 $host = 'mysql_db_webapp2';
 $db = 'mydatabase';
 $user = 'root';
@@ -11,5 +10,9 @@ $options = [
     PDO::ATTR_EMULATE_PREPARES => false,
 ];
 
-$pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass, $options);
-
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass, $options);
+} catch (PDOException $e) {
+    die("Could not connect to the database $db :" . $e->getMessage());
+}
+?>
