@@ -11,7 +11,7 @@ require_once "navbar.php";
     <link rel="stylesheet" href="css/style.css">
     <title>About us</title>
 </head>
-<body>
+<body class="plane-air">
 <div class="main">
     <div class="head">
         About us

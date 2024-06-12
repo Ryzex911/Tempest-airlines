@@ -37,11 +37,53 @@
     justify-content: center;
     flex-direction: column;
 }
-body{
+.plane-air{
     background-image: url("../pics/image 1-Photoroom (1).png");
     background-repeat: no-repeat;
     background-size: 1537px 750px;
 }
 .booking{
-    font-size: 50px;
+    font-size: 30px;
+    margin-top: 50px;
+}
+.toprow-reizen{
+    display: flex;
+    gap: 30px;
+}
+.borrow-reizen{
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+.reis-boek{
+    background-image: url("../pics/plane-horo.jpg");
+    width: 220px;
+    height: 250px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.besteming{
+    color: #1A115A;
+    font-size: 25px;
+    margin-top: 170px;
+}
+.prijs{
+    color: #D30D14;
+    font-size: 22px;
+}
+.text-book{
+    font-size: 16px;
+}
+.flex-direction{
+    display: flex;
+}
+.prijs-sign{
+    color: #D30D14;
+    font-size: 25px;
+}
+.gap{
+    gap: 8px;
+    display: flex;
 }
