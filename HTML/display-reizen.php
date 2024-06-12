@@ -33,7 +33,7 @@ $result = $conn->query($sql);
         echo "</div>";
         }
         ?>
-        
+        <!-- moet nog de database goed linken $Reis moet veranderen en locatie en prijs en moet de img in css nog goed linken met database-->
     </div>
     <div class="bottomrow-reizen">
 
