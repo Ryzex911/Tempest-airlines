@@ -1567,3 +1567,105 @@ header {
     background-color: rgba(255, 0, 0, 0.61);
 
 }
+
+/****************************************************display-reis pagina **********************************/
+.display-reis-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.main-display-reis {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booking {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.toprow-reizen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reis-boek {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.reis-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.bestemming {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.prijs {
+    font-size: 18px;
+    color: #ff5733;
+    margin-bottom: 10px;
+}
+
+.beschrijving {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.flex-direction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.gap {
+    margin: 5px 0;
+}
+
+.text-book {
+    font-size: 16px;
+}
+
+.book-now-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d70404;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.book-now-button:hover {
+    background-color: #e04b2c;
+}
+
+@media (max-width: 768px) {
+    .reis-boek {
+        width: 100%;
+    }
+}
