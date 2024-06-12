@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['isAdmin']) || !$_SESSION['isAdmin']) {
-    exit;
-}
+
 require_once "connection.php";
 if (isset($_POST['add'])) {
     $titel = $_POST['titel'];
