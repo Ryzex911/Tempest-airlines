@@ -33,16 +33,7 @@ $result = $conn->query($sql);
         echo "</div>";
         }
         ?>
-
-            echo "<div class='gerecht'>";
-            echo "<div class='font title'>" . $Reis['titel'] . "</div>";
-            echo "<div class='beschrijving text-cat margin-top-'>" . $Reis['beschrijving'] . "</div>";
-            echo "<div class='bestel margin-top-'>Price: $" . $Reis['prijs'] . "</div>";
-            if (!empty($Reis['image'])) {
-                echo "<img class='img-order border-radius-twee' width='140' style='margin-top: 12px;' src='pics/" . $Reis['image'] . "' />";
-            }
-
-
+        
     </div>
     <div class="bottomrow-reizen">
 
