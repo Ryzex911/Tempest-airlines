@@ -11,10 +11,7 @@ require_once 'navbar.php';
 $user_id = $_SESSION['user_id'];
 
 try {
-    $stmt = $pdo->prepare("SELECT reis.titel, reis.prijs, reis.image 
-                           FROM reis 
-                           INNER JOIN boeking ON reis.id = boeking.reis_id 
-                           WHERE boeking.user_id = ?");
+    $stmt = $pdo->prepare("SELECT reis.id, reis.titel, reis.prijs, reis.image , boeking.status  FROM reis INNER JOIN boeking ON reis.id = boeking.reis_id WHERE boeking.user_id = ?");
     $stmt->execute([$user_id]);
     $trips = $stmt->fetchAll();
 } catch (PDOException $e) {
@@ -32,13 +29,18 @@ try {
 <body class="reis-body">
 <div class="container">
     <h1 class="title-trip">Your booked trips</h1>
-    <div class="trips">
+    <div class="reis-container">
         <?php foreach($trips as $trip): ?>
-            <div class="trip">
-                <img src="<?= htmlspecialchars($trip['image']); ?>" alt="<?= htmlspecialchars($trip['titel']); ?>">
+            <div class="reis-display">
+                <img class="trip-pic" src="../pics/<?= htmlspecialchars($trip['image']); ?>" alt="<?= htmlspecialchars($trip['titel']); ?>">
                 <div class="info">
                     <h2><?= htmlspecialchars($trip['titel']); ?></h2>
                     <p>$<?= number_format($trip['prijs'], 2); ?></p>
+                    <h2><?= htmlspecialchars($trip['status']); ?></h2>
+                    <form action="cancel_trip.php" method="post">
+                        <input type="hidden" name="reis_id" value="<?= htmlspecialchars($trip['id']); ?>">
+                        <button type="submit" class="cancel-button">Anuleer Reis</button>
+                    </form>
                 </div>
             </div>
         <?php endforeach; ?>

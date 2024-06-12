@@ -3,7 +3,7 @@ session_start();
 require_once "connection.php";
 require_once "navbar.php";
 
-if (!isset($_SESSION['isAdmin']) || !$_SESSION['isAdmin']) {
+if (!isset($_SESSION['admin']) || !$_SESSION['admin']) {
     die('Access denied. Admins only.');
 }
 

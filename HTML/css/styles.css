@@ -1524,14 +1524,30 @@ header {
 
 /*******************************************************************reizen pagina**************************************************/
 .reis-body {
-    font-family: Arial, sans-serif;
-    background-color: #F5F5F5;
-    margin: 0;
-    padding: 0;
+    background-image: url("../pics/dark-mountain.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flow;
+    justify-content: center;
+
+}
+
+.reis-container{
+    text-align: center;
 }
 .title-trip {
-    margin: 20px 0;
+    color: white;
+    text-align: center;
+    margin-top: 75px;
+
 }
+
+.reis-display {
+    background-color: white;
+    height: auto;
+    width: 300px;
+}
+
 .logout-link {
     display: inline-block;
     margin-top: 20px;
@@ -1541,4 +1557,13 @@ header {
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
+}
+
+.trip-pic {
+    height: 200px;
+}
+
+.cancel-button {
+    background-color: rgba(255, 0, 0, 0.61);
+
 }
