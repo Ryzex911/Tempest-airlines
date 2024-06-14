@@ -1,11 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+<?php
+require_once "connection.php";
+
+$message = "";
+$isError = false;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $messageContent = $_POST['message'];
+
+    $sql = "INSERT INTO feedback (name, email, message, submission_date) VALUES (?, ?, ?, NOW())";
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(1, $name, PDO::PARAM_STR);
+    $stmt->bindParam(2, $email, PDO::PARAM_STR);
+    $stmt->bindParam(3, $messageContent, PDO::PARAM_STR);
+
+    if ($stmt->execute()) {
+        $message = "Thank you for your feedback!";
+    } else {
+        $isError = true;
+        $message = "Error: " . $stmt->errorInfo()[2];
+    }
+}
+?>
+
+
 <body class="contact-body">
 <?php include_once "navbar.php"; ?>
 

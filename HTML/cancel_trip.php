@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_SESSION['user_id'];
 
     try {
-        $stmt = $pdo->prepare("UPDATE boeking SET status = 'geanuleert' WHERE reis_id = ? AND user_id = ?");
+        $stmt = $pdo->prepare("UPDATE boeking SET status = 'geannuleerd' WHERE reis_id = ? AND user_id = ?");
         $stmt->execute([$reis_id, $user_id]);
 
         header('Location: reizen.php');

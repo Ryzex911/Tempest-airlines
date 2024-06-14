@@ -1,27 +1,65 @@
-.main{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../pics/image 1-Photoroom (1).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
-.head{
+
+.head {
     font-size: 25px;
-    background-color:  #406a90;
+    background-color: #406a90;
     color: white;
-    width: 50%;
     padding: 12px;
-    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    margin-bottom: 20px;
 }
-.about-us-text{
-    background-color: white;
-    padding: 12px;
-    width: 50%;
+
+.about-us-text {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 100%;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
-.text{
-    margin-top: 15px;
-    font-size: 20px;
+
+.text-top,
+.text {
+    font-size: 18px;
     color: black;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
+
+@media only screen and (max-width: 768px) {
+    .head,
+    .about-us-text {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .head,
+    .about-us-text {
+        width: 100%;
+        border-radius: 0; /* Remove rounded corners on smaller screens */
+    }
+}
+
 .text-top{
     font-size: 20px;
     color: black;

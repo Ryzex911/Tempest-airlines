@@ -8,15 +8,16 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if(isset($_POST['reis_id']) && !empty($_POST['reis_id']) && isset($_POST['vanaf']) && !empty($_POST['vanaf'])) {
+    if (isset($_POST['reis_id']) && !empty($_POST['reis_id'])) {
         $user_id = $_SESSION['user_id'];
-        $trip_id = $_POST['reis_id'];
-        $vanaf = $_POST['vanaf'];
-        $tot = $_POST['tot'];
+        $reis_id = $_POST['reis_id'];
+        $current_date = date('Y-m-d'); // Set the current date for 'vanaf' and 'tot'
 
         try {
-            $stmt = $pdo->prepare("INSERT INTO boeking (user_id, reis_id, vanaf, tot) VALUES (?, ?, ?, ?)");
-            $stmt->execute([$user_id, $trip_id, $vanaf, $tot]);
+            $stmt = $pdo->prepare("INSERT INTO boeking (user_id, reis_id, status, vanaf, tot, prijs) VALUES (?, ?, 'booked', ?, ?, 0)");
+            $stmt->execute([$user_id, $reis_id, $current_date, $current_date]);
+
+            // Redirect to booking success page
             header('Location: booking-success.php');
             exit();
         } catch (PDOException $e) {
