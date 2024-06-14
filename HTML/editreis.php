@@ -4,10 +4,7 @@ ini_set('display_errors', 1);
 ob_start();
 
 session_start();
-if (!isset($_SESSION['isAdmin']) || !$_SESSION['isAdmin']) {
-    header('Location: login.php');
-    exit();
-}
+
 
 require_once "connection.php";
 require_once "navbar.php";

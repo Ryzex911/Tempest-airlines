@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['email'] = $user['email'];
             $_SESSION['admin'] = $user['admin'];
-            echo "<script>window.location.href = 'reizen.php';</script>";
+            echo "<script>window.location.href = 'index.php';</script>";
             exit();
         } else {
             echo "<script>alert('Incorrect email or password');</script>";
