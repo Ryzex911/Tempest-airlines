@@ -27,7 +27,7 @@ try {
 </header>
 
 <div class="homepage-container">
-    <form action="display-reis.php" method="get" class="homepage-search-form">
+    <form action="display-reizen.php" method="get" class="homepage-search-form">
         <h2 class="homepage-search-title">Search Flights</h2>
         <div class="homepage-search-inputs">
             <label for="homepage-num_passengers">Number of Passengers:</label>
