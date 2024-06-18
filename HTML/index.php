@@ -2,9 +2,8 @@
 require_once "navbar.php";
 require_once "connection.php";
 
-// Fetch popular destinations from the database
 try {
-    $stmt = $pdo->query("SELECT * FROM reis ORDER BY id LIMIT 4"); // Assuming 'reis' is your table name
+    $stmt = $pdo->query("SELECT * FROM reis ORDER BY id LIMIT 4");
     $destinations = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     die("Database error: " . $e->getMessage());
