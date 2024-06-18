@@ -18,7 +18,7 @@ function displayReis($Reis) {
     echo "<div class='text-book'> Boeken Vanaf: " . htmlspecialchars($Reis['vanaf']) . "</div>";
     echo "<div class='text-book'>Boeken Tot: " . htmlspecialchars($Reis['tot']) . "</div>";
     echo '<span>';
-    echo "<a href='details.php?id=" . htmlspecialchars($Reis['id']) . "' class='book-now-button'>Details</a>"; // Link to details page
+    echo "<a href='details.php?id=" . htmlspecialchars($Reis['id']) . "' class='book-now-button'>Details</a>";
     echo "</div>";
     echo "</div>";
     echo "</div>";
