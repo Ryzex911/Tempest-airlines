@@ -25,6 +25,8 @@ $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
     <h2 class="admin-welcoming-text">Welcome to the admin panel of Tempest</h2>
     <h3 class="admin-items-list-title">Trip List</h3>
     <a href="addreis.php" class="admin-add-btn">Add Trip</a>
+    <a href="ratings.php" class="admin-add-btn">See Ratings</a>
+    <a href="feedback.php" class="admin-add-btn">See Feedback</a>
     <form class="admin-search-bar" method="GET">
         <input class="admin-search-bar-text" type="text" name="search" placeholder="Search" value="<?php echo htmlspecialchars($searchTerm); ?>">
         <button class="admin-search-bar-btn" type="submit">Search</button>
