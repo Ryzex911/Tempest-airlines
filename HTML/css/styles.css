@@ -1273,7 +1273,9 @@ body.homepage-body {
     color: #666;
     margin-bottom: 15px;
 }
+.rating{
 
+}
 .homepage-book-now-btn , .homepage-search-button {
     display: inline-block;
     padding: 10px 20px;

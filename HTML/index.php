@@ -2,6 +2,8 @@
 require_once "navbar.php";
 require_once "connection.php";
 
+$stmt = $pdo->query("SELECT * FROM rating ORDER BY id LIMIT 1");
+
 try {
     $stmt = $pdo->query("SELECT * FROM reis ORDER BY id LIMIT 4");
     $destinations = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -46,15 +48,24 @@ try {
 
 <div class="container">
     <h2 class="homepage-section-title">Explore Our Popular Destinations</h2>
-    <div class="homepage-trips">
-        <?php foreach ($destinations as $destination): ?>
-            <div class="homepage-trip">
-                <img src="../pics/<?= htmlspecialchars($destination['image']); ?>" alt="<?= htmlspecialchars($destination['titel']); ?>">
-                <h3 class="homepage-trip-title"><?= htmlspecialchars($destination['titel']); ?></h3>
-                <p class="homepage-trip-description"><?= htmlspecialchars($destination['beschrijving']); ?></p>
-                <a href="details.php?id=<?= $destination['id']; ?>" class="homepage-book-now-btn">Book Now</a>
-            </div>
-        <?php endforeach; ?>
+        <div class="homepage-trips">
+            <?php if ($destinations): ?>
+                <?php foreach ($destinations as $destination): ?>
+                    <div class="homepage-trip">
+                        <img src="../pics/<?= htmlspecialchars($destination['image']); ?>" alt="<?= htmlspecialchars($destination['titel']); ?>">
+                        <h3 class="homepage-trip-title"><?= htmlspecialchars($destination['titel']); ?></h3>
+                        <?php if (isset($destination['rating'])): ?>
+                            <p class="rating"><?= htmlspecialchars($destination['rating']); ?></p>
+                        <?php else: ?>
+                            <p class="rating">Rating not available</p>
+                        <?php endif; ?>
+                        <p class="homepage-trip-description"><?= htmlspecialchars($destination['beschrijving']); ?></p>
+                        <a href="details.php?id=<?= $destination['id']; ?>" class="homepage-book-now-btn">Book Now</a>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>No destinations available at the moment. Please check back later.</p>
+            <?php endif; ?>
     </div>
 </div>
 
