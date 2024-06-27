@@ -23,6 +23,7 @@ $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
 <body class="admin-items">
 <div class="admin-items-container">
     <h2 class="admin-welcoming-text">Welcome to the admin panel of Tempest</h2>
+    <a href="user-page-admin.php">Wachtwoord veranderen</a>
     <h3 class="admin-items-list-title">Trip List</h3>
     <a href="addreis.php" class="admin-add-btn">Add Trip</a>
     <a href="ratings.php" class="admin-add-btn">See Ratings</a>
