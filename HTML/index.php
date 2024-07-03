@@ -2,8 +2,6 @@
 require_once "navbar.php";
 require_once "connection.php";
 
-$stmt = $pdo->query("SELECT * FROM rating ORDER BY id LIMIT 1");
-
 try {
     $stmt = $pdo->query("SELECT * FROM reis ORDER BY id LIMIT 4");
     $destinations = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -20,6 +20,7 @@ function displayReis($rating) {
     echo "<div class='text-book'>Naam: " . htmlspecialchars($rating['name']) . "</div>";
     echo "<div class='beschrijving'> email:" . htmlspecialchars($rating['email']) . "</div>";
     echo "<div class='beschrijving'>feedback: " . htmlspecialchars($rating['feedback']) . "</div>";
+    echo "<div class='beschrijving'>User ID: " . htmlspecialchars($users['id']) . "</div>"; // Display user ID
     echo '<span>';
     echo "</div>";
     echo "</div>";

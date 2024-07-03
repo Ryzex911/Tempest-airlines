@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once 'connection.php';
 
 $host = 'mysql_db_webapp2';
@@ -13,6 +13,11 @@ $options = [
     PDO::ATTR_EMULATE_PREPARES => false,
 ];
 
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit();
+}
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass, $options);
 } catch (PDOException $e) {
@@ -23,23 +28,28 @@ try {
 $error = '';
 $successMessage = '';
 
-// Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $rating = intval($_POST["rating"]);
-    $name = htmlspecialchars($_POST["name"]);
-    $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-    $feedback = htmlspecialchars($_POST["feedback"]);
+    // Haal de user_id op uit de sessie
+    $id = isset($_SESSION['user_id']) ? intval($_SESSION['user_id']) : null;
+    if (!$id) {
+        $error = "User is not logged in.";
+    } else {
+        $rating = intval($_POST["rating"]);
+        $name = htmlspecialchars($_POST["name"]);
+        $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+        $feedback = htmlspecialchars($_POST["feedback"]);
 
-    // Insert rating into the database
-    $sql = "INSERT INTO rating (rating, name, email, feedback, created_at) VALUES (?, ?, ?, ?, NOW())";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$rating, $name, $email, $feedback]);
+        // Insert rating into the database
+        $sql = "INSERT INTO rating (id, rating, name, email, feedback, created_at) VALUES (?, ?, ?, ?, ?, NOW())";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$id, $rating, $name, $email, $feedback]);
 
-    $successMessage = "Thank you for your rating!";
+        $successMessage = "Thank you for your rating!";
 
-    // Redirect to index.php after successful submission
-    header("Location: index.php");
-    exit(); // Ensure that no further code execution happens after the redirect
+        // Redirect to index.php after successful submission
+        header("Location: index.php");
+        exit(); // Ensure that no further code execution happens after the redirect
+    }
 }
 
 // Close connection
