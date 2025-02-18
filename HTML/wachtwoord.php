@@ -34,7 +34,7 @@ if (isset($_GET["id"]) &&!empty($_GET["id"])) {
 
         $hashed_password = password_hash($newPassword, PASSWORD_DEFAULT);
 
-        $stmt = $pdo->prepare("UPDATE users SET password = :new_password WHERE id = :id");
+
         $stmt->bindParam(":id", $id, PDO::PARAM_INT);
         $stmt->bindParam(":new_password", $hashed_password, PDO::PARAM_STR);
         $stmt->execute();
